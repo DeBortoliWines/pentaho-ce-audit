@@ -102,8 +102,8 @@
   <hop> <from>Switch &#x2f; Case</from><to>SQL for HSQL Database Engine</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>SQL for PostgreSQL</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>Abort</to><enabled>Y</enabled> </hop>
-  <hop> <from>create table</from><to>Abort -  Error create pentaho_ce_audit_metadata table </to><enabled>Y</enabled> </hop>
-  <hop> <from>create table</from><to>Table pentaho_ce_audit_metadata created</to><enabled>Y</enabled> </hop>
+  <hop> <from>create table</from><to>Abort -  Error create PENTAHO_CE_AUDIT_metadata table </to><enabled>Y</enabled> </hop>
+  <hop> <from>create table</from><to>Table PENTAHO_CE_AUDIT_metadata created</to><enabled>Y</enabled> </hop>
   <hop> <from>trigger</from><to>Get database type</to><enabled>Y</enabled> </hop>
   <hop> <from>SQL for HSQL Database Engine</from><to>create table</to><enabled>Y</enabled> </hop>
   <hop> <from>SQL for PostgreSQL</from><to>create table</to><enabled>Y</enabled> </hop>
@@ -131,7 +131,7 @@
     </step>
 
   <step>
-    <name>Abort -  Error create pentaho_ce_audit_metadata table </name>
+    <name>Abort -  Error create PENTAHO_CE_AUDIT_metadata table </name>
     <type>Abort</type>
     <description/>
     <distribute>Y</distribute>
@@ -356,7 +356,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </step>
 
   <step>
-    <name>Table pentaho_ce_audit_metadata created</name>
+    <name>Table PENTAHO_CE_AUDIT_metadata created</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -436,7 +436,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
   <step_error_handling>
       <error>
         <source_step>create table</source_step>
-        <target_step>Abort -  Error create pentaho_ce_audit_metadata table </target_step>
+        <target_step>Abort -  Error create PENTAHO_CE_AUDIT_metadata table </target_step>
         <is_enabled>Y</is_enabled>
         <nr_valuename/>
         <descriptions_valuename/>

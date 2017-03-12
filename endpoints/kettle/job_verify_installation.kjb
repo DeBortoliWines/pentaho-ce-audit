@@ -92,7 +92,7 @@
       <yloc>219</yloc>
       </entry>
     <entry>
-      <name>Table pentaho_ce_audit exists&#x3f;</name>
+      <name>Table PENTAHO_CE_AUDIT exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>&#x22;PENTAHO_CE_AUDIT&#x22;</tablename>
@@ -115,7 +115,7 @@
       <yloc>513</yloc>
       </entry>
     <entry>
-      <name>Table pentaho_ce_audit_metadata</name>
+      <name>Table PENTAHO_CE_AUDIT_metadata</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>&#x22;PENTAHO_CE_AUDIT_METADATA&#x22;</tablename>
@@ -142,7 +142,7 @@
   <hops>
     <hop>
       <from>Table pro_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
+      <to>Table PENTAHO_CE_AUDIT exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -159,8 +159,8 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit_metadata</to>
+      <from>Table PENTAHO_CE_AUDIT exists&#x3f;</from>
+      <to>Table PENTAHO_CE_AUDIT_metadata</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -168,7 +168,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
+      <from>Table PENTAHO_CE_AUDIT_metadata</from>
       <to>OUTPUT</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -177,7 +177,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
+      <from>Table PENTAHO_CE_AUDIT exists&#x3f;</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -186,7 +186,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
+      <from>Table PENTAHO_CE_AUDIT_metadata</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

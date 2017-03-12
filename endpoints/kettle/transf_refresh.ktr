@@ -140,7 +140,7 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Transformation for table pentaho_ce_audit&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</note>
+      <note>&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#x3d;&#xd;&#xa;Transformation for table PENTAHO_CE_AUDIT&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</note>
       <xloc>1096</xloc>
       <yloc>84</yloc>
       <width>531</width>
@@ -230,12 +230,12 @@
   <hop> <from>input Login OKAY</from><to>BRIDGE</to><enabled>Y</enabled> </hop>
   <hop> <from>input instances OKAY 2</from><to>BRIDGE</to><enabled>Y</enabled> </hop>
   <hop> <from>BRIDGE</from><to>Block this step until steps finish</to><enabled>Y</enabled> </hop>
-  <hop> <from>BRIDGE</from><to>Truncate pentaho_ce_audit table</to><enabled>Y</enabled> </hop>
+  <hop> <from>BRIDGE</from><to>Truncate PENTAHO_CE_AUDIT table</to><enabled>Y</enabled> </hop>
   <hop> <from>Get Variables</from><to>User Defined Java Expression 2</to><enabled>Y</enabled> </hop>
   <hop> <from>User Defined Java Expression 2</from><to>Split field to rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Split field to rows</from><to>Extract Period</to><enabled>Y</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Select rows for pentaho_ce_audit table</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select rows for pentaho_ce_audit table</from><to>Not specified default values</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Select rows for PENTAHO_CE_AUDIT table</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select rows for PENTAHO_CE_AUDIT table</from><to>Not specified default values</to><enabled>Y</enabled> </hop>
   <hop> <from>Caclulate Time</from><to>Rename and set types</to><enabled>Y</enabled> </hop>
   <hop> <from>Calculate hours12</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
   <hop> <from>Cartesian Product</from><to>Caclulate Time</to><enabled>Y</enabled> </hop>
@@ -460,7 +460,7 @@
            </partitioning>
     <steps>
       <step>
-        <name>Truncate pentaho_ce_audit table</name>
+        <name>Truncate PENTAHO_CE_AUDIT table</name>
         <CopyNr>0</CopyNr>
         </step>
       </steps>
@@ -1523,7 +1523,7 @@
     </step>
 
   <step>
-    <name>Select rows for pentaho_ce_audit table</name>
+    <name>Select rows for PENTAHO_CE_AUDIT table</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1911,7 +1911,7 @@
     </step>
 
   <step>
-    <name>Truncate pentaho_ce_audit table</name>
+    <name>Truncate PENTAHO_CE_AUDIT table</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>

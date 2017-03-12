@@ -219,7 +219,7 @@
       <yloc>190</yloc>
       </entry>
     <entry>
-      <name>Table pentaho_ce_audit exists&#x3f;</name>
+      <name>Table PENTAHO_CE_AUDIT exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>&#x22;PENTAHO_CE_AUDIT&#x22;</tablename>
@@ -287,7 +287,7 @@
       <yloc>60</yloc>
       </entry>
     <entry>
-      <name>Table pentaho_ce_audit_metadata</name>
+      <name>Table PENTAHO_CE_AUDIT_metadata</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>&#x22;PENTAHO_CE_AUDIT_METADATA&#x22;</tablename>
@@ -333,7 +333,7 @@
       <yloc>189</yloc>
       </entry>
     <entry>
-      <name>Drop table pentaho_ce_audit</name>
+      <name>Drop table PENTAHO_CE_AUDIT</name>
       <description/>
       <type>SQL</type>
       <sql>DROP TABLE &#x22;PENTAHO_CE_AUDIT&#x22;&#x3b;</sql>
@@ -413,7 +413,7 @@
     </hop>
     <hop>
       <from>Table pro_audit exists&#x3f;</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
+      <to>Table PENTAHO_CE_AUDIT exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -422,7 +422,7 @@
     </hop>
     <hop>
       <from>Execute createProAudirTable</from>
-      <to>Table pentaho_ce_audit exists&#x3f;</to>
+      <to>Table PENTAHO_CE_AUDIT exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -430,7 +430,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
+      <from>Table PENTAHO_CE_AUDIT exists&#x3f;</from>
       <to>Execute createPentahoCEAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -467,7 +467,7 @@
     </hop>
     <hop>
       <from>Execute createPentahoCEAuditTable</from>
-      <to>Table pentaho_ce_audit_metadata</to>
+      <to>Table PENTAHO_CE_AUDIT_metadata</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -475,7 +475,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
+      <from>Table PENTAHO_CE_AUDIT_metadata</from>
       <to>Execute createPentahoCEAuditMetadataTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -493,8 +493,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit exists&#x3f;</from>
-      <to>Drop table pentaho_ce_audit</to>
+      <from>Table PENTAHO_CE_AUDIT exists&#x3f;</from>
+      <to>Drop table PENTAHO_CE_AUDIT</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -502,7 +502,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Drop table pentaho_ce_audit</from>
+      <from>Drop table PENTAHO_CE_AUDIT</from>
       <to>Execute createPentahoCEAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -511,7 +511,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pentaho_ce_audit_metadata</from>
+      <from>Table PENTAHO_CE_AUDIT_metadata</from>
       <to>Drop table metadata</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

@@ -121,9 +121,9 @@
   <hop> <from>TINP Get Metadata</from><to>Get System Info</to><enabled>Y</enabled> </hop>
   <hop> <from>Get System Info</from><to>Get variables access 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Get variables access 2</from><to>Select values 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>Truncate pentaho_ce_audit_metadata</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>Wait pentaho_ce_audit_metadata finish</to><enabled>Y</enabled> </hop>
-  <hop> <from>Wait pentaho_ce_audit_metadata finish</from><to>TOU - Metadata</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>Truncate PENTAHO_CE_AUDIT_metadata</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>Wait PENTAHO_CE_AUDIT_metadata finish</to><enabled>Y</enabled> </hop>
+  <hop> <from>Wait PENTAHO_CE_AUDIT_metadata finish</from><to>TOU - Metadata</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Get System Info</name>
@@ -307,7 +307,7 @@
     </step>
 
   <step>
-    <name>Truncate pentaho_ce_audit_metadata</name>
+    <name>Truncate PENTAHO_CE_AUDIT_metadata</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -339,7 +339,7 @@
     </step>
 
   <step>
-    <name>Wait pentaho_ce_audit_metadata finish</name>
+    <name>Wait PENTAHO_CE_AUDIT_metadata finish</name>
     <type>BlockUntilStepsFinish</type>
     <description/>
     <distribute>Y</distribute>
@@ -351,7 +351,7 @@
            </partitioning>
     <steps>
       <step>
-        <name>Truncate pentaho_ce_audit_metadata</name>
+        <name>Truncate PENTAHO_CE_AUDIT_metadata</name>
         <CopyNr>0</CopyNr>
         </step>
       </steps>

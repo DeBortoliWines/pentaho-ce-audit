@@ -99,9 +99,9 @@
   </connection>
   <order>
   <hop> <from>Get database type</from><to>Switch &#x2f; Case</to><enabled>Y</enabled> </hop>
-  <hop> <from>create table</from><to>Abort -  Error create pentaho_ce_audit table </to><enabled>Y</enabled> </hop>
+  <hop> <from>create table</from><to>Abort -  Error create PENTAHO_CE_AUDIT table </to><enabled>Y</enabled> </hop>
   <hop> <from>trigger</from><to>Get database type</to><enabled>Y</enabled> </hop>
-  <hop> <from>create table</from><to>Table pentaho_ce_audit created</to><enabled>Y</enabled> </hop>
+  <hop> <from>create table</from><to>Table PENTAHO_CE_AUDIT created</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>SQL for HSQL Database Engine</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>SQL for PostgreSQL</to><enabled>Y</enabled> </hop>
   <hop> <from>Switch &#x2f; Case</from><to>Abort</to><enabled>Y</enabled> </hop>
@@ -131,7 +131,7 @@
     </step>
 
   <step>
-    <name>Abort -  Error create pentaho_ce_audit table </name>
+    <name>Abort -  Error create PENTAHO_CE_AUDIT table </name>
     <type>Abort</type>
     <description/>
     <distribute>Y</distribute>
@@ -142,7 +142,7 @@
            <schema_name/>
            </partitioning>
       <row_threshold>0</row_threshold>
-      <message>Abort -  Error create pentaho_ce_audit table </message>
+      <message>Abort -  Error create PENTAHO_CE_AUDIT table </message>
       <always_log_rows>Y</always_log_rows>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -356,7 +356,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </step>
 
   <step>
-    <name>Table pentaho_ce_audit created</name>
+    <name>Table PENTAHO_CE_AUDIT created</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -436,7 +436,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
   <step_error_handling>
       <error>
         <source_step>create table</source_step>
-        <target_step>Abort -  Error create pentaho_ce_audit table </target_step>
+        <target_step>Abort -  Error create PENTAHO_CE_AUDIT table </target_step>
         <is_enabled>Y</is_enabled>
         <nr_valuename/>
         <descriptions_valuename/>

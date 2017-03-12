@@ -138,7 +138,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>CREATE VIEW pentaho_ce_audit AS&#xd;&#xa;    SELECT &#xd;&#xa;	PA.AUDIT_TIME as data, &#xd;&#xa;	PA.JOB_ID as job, &#xd;&#xa;	PA.ACTOR as usuario, &#xd;&#xa;	PA.OBJ_ID as arquivo, &#xd;&#xa;	PA.OBJ_ID as diretorio, &#xd;&#xa;	PA.DURATION as duracao,&#xd;&#xa;	PA.MESSAGE_TYPE as tipo,&#xd;&#xa;	PA.MESSAGE_NAME as msg_name,&#xd;&#xa;	PA.MESSAGE_TEXT_VALUE as msg_value&#xd;&#xa;FROM pro_audit PA&#xd;&#xa;where PA.job_id&#x21;&#x3d;&#x27;Session startup actions&#x27; AND PA.job_id&#x21;&#x3d;&#x27;Global startup actions&#x27;&#x3b;</sql>
+    <sql>CREATE VIEW PENTAHO_CE_AUDIT AS&#xd;&#xa;    SELECT &#xd;&#xa;	PA.AUDIT_TIME as data, &#xd;&#xa;	PA.JOB_ID as job, &#xd;&#xa;	PA.ACTOR as usuario, &#xd;&#xa;	PA.OBJ_ID as arquivo, &#xd;&#xa;	PA.OBJ_ID as diretorio, &#xd;&#xa;	PA.DURATION as duracao,&#xd;&#xa;	PA.MESSAGE_TYPE as tipo,&#xd;&#xa;	PA.MESSAGE_NAME as msg_name,&#xd;&#xa;	PA.MESSAGE_TEXT_VALUE as msg_value&#xd;&#xa;FROM pro_audit PA&#xd;&#xa;where PA.job_id&#x21;&#x3d;&#x27;Session startup actions&#x27; AND PA.job_id&#x21;&#x3d;&#x27;Global startup actions&#x27;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
