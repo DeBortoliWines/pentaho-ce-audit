@@ -79,7 +79,7 @@
       <yloc>121</yloc>
       </entry>
     <entry>
-      <name>Table pro_audit exists&#x3f;</name>
+      <name>Table PRO_AUDIT exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>PRO_AUDIT</tablename>
@@ -141,7 +141,7 @@
   </entries>
   <hops>
     <hop>
-      <from>Table pro_audit exists&#x3f;</from>
+      <from>Table PRO_AUDIT exists&#x3f;</from>
       <to>Table PENTAHO_CE_AUDIT exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -151,7 +151,7 @@
     </hop>
     <hop>
       <from>START</from>
-      <to>Table pro_audit exists&#x3f;</to>
+      <to>Table PRO_AUDIT exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -195,7 +195,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table pro_audit exists&#x3f;</from>
+      <from>Table PRO_AUDIT exists&#x3f;</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

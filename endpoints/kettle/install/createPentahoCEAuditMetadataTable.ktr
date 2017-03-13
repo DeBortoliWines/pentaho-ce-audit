@@ -142,7 +142,7 @@
            <schema_name/>
            </partitioning>
       <row_threshold>0</row_threshold>
-      <message>Abort -  Error create pro_audit_metadata table </message>
+      <message>Abort -  Error create PRO_AUDIT_METADATA table </message>
       <always_log_rows>Y</always_log_rows>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
