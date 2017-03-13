@@ -431,7 +431,7 @@
       <yloc>60</yloc>
     </entry>
     <entry>
-      <name>Table PRO_AUDIT exists&#x3f;</name>
+      <name>Table pro_audit exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
       <tablename>PRO_AUDIT</tablename>
@@ -482,7 +482,7 @@
       <name>Table PENTAHO_CE_AUDIT exists&#x3f;</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>&#x22;PENTAHO_CE_AUDIT&#x22;</tablename>
+      <tablename>PENTAHO_CE_AUDIT</tablename>
       <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
@@ -552,7 +552,7 @@
       <name>Table PENTAHO_CE_AUDIT_metadata</name>
       <description/>
       <type>TABLE_EXISTS</type>
-      <tablename>&#x22;PENTAHO_CE_AUDIT_METADATA&#x22;</tablename>
+      <tablename>PENTAHO_CE_AUDIT_METADATA</tablename>
       <schemaname/>
       <connection>Hibernate</connection>
       <parallel>N</parallel>
@@ -659,7 +659,7 @@
     </hop>
     <hop>
       <from>Execute replace bean</from>
-      <to>Table PRO_AUDIT exists&#x3f;</to>
+      <to>Table pro_audit exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -667,7 +667,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table PRO_AUDIT exists&#x3f;</from>
+      <from>Table pro_audit exists&#x3f;</from>
       <to>Execute createProAuditTable</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -676,7 +676,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Table PRO_AUDIT exists&#x3f;</from>
+      <from>Table pro_audit exists&#x3f;</from>
       <to>Table PENTAHO_CE_AUDIT exists&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

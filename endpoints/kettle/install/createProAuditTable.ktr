@@ -472,22 +472,17 @@
     </hop>
     <hop>
       <from>Switch &#x2f; Case</from>
-      <to>SQL for PostgreSQL&#x2f;MySQL</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Switch &#x2f; Case</from>
       <to>Abort</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Execute SQL script </from>
-      <to>Abort -  Error create PRO_AUDIT table </to>
+      <to>Abort -  Error create pro_audit table </to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Execute SQL script </from>
-      <to>Table PRO_AUDIT created</to>
+      <to>Table pro_audit created</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -501,7 +496,22 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>SQL for PostgreSQL&#x2f;MySQL</from>
+      <from>SQL for PostgreSQL</from>
+      <to>Execute SQL script </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch &#x2f; Case</from>
+      <to>SQL for PostgreSQL</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch &#x2f; Case</from>
+      <to>SQL for MySQL</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SQL for MySQL</from>
       <to>Execute SQL script </to>
       <enabled>Y</enabled>
     </hop>
@@ -535,7 +545,7 @@
     </step>
 
   <step>
-    <name>Abort -  Error create PRO_AUDIT table </name>
+    <name>Abort -  Error create pro_audit table </name>
     <type>Abort</type>
     <description/>
     <distribute>Y</distribute>
@@ -546,7 +556,7 @@
       <schema_name/>
     </partitioning>
       <row_threshold>0</row_threshold>
-      <message>Abort -  Error create PRO_AUDIT table </message>
+      <message>Abort -  Error create pro_audit table </message>
       <always_log_rows>Y</always_log_rows>
     <cluster_schema/>
     <remotesteps>
@@ -735,7 +745,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE PRO_AUDIT&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE pro_audit&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>sql</name>
         <rename>sql</rename>
         <type>String</type>
@@ -757,7 +767,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </step>
 
   <step>
-    <name>SQL for PostgreSQL&#x2f;MySQL</name>
+    <name>SQL for PostgreSQL</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -771,7 +781,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE PRO_AUDIT&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE pro_audit&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>sql</name>
         <rename>sql</rename>
         <type>String</type>
@@ -811,9 +821,9 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
 <case_value_group/>
 <default_target_step>Abort</default_target_step>
 <cases><case><value>MySQL</value>
-<target_step>SQL for PostgreSQL&#x2f;MySQL</target_step>
+<target_step>SQL for MySQL</target_step>
 </case><case><value>PostgreSQL</value>
-<target_step>SQL for PostgreSQL&#x2f;MySQL</target_step>
+<target_step>SQL for PostgreSQL</target_step>
 </case><case><value>HSQL Database Engine</value>
 <target_step>SQL for HSQL Database Engine</target_step>
 </case></cases>    <cluster_schema/>
@@ -831,7 +841,7 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </step>
 
   <step>
-    <name>Table PRO_AUDIT created</name>
+    <name>Table pro_audit created</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -887,10 +897,46 @@ public void dispose(StepMetaInterface smi, StepDataInterface sdi)
     </GUI>
     </step>
 
+  <step>
+    <name>SQL for MySQL</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var sql &#x3d; &#x27;CREATE TABLE pro_audit&#x28; &#x27;&#x2b;&#xd;&#xa;	&#x27;job_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;inst_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_id varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;obj_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;actor varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_type varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_name varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_text_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;message_num_value varchar&#x28;256&#x29;, &#x27;&#x2b;&#xd;&#xa;	&#x27;audit_time timestamp, &#x27;&#x2b;&#xd;&#xa;	&#x27;duration real&#x29;&#x27;&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>sql</name>
+        <rename>sql</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
   <step_error_handling>
       <error>
         <source_step>Execute SQL script </source_step>
-        <target_step>Abort -  Error create PRO_AUDIT table </target_step>
+        <target_step>Abort -  Error create pro_audit table </target_step>
         <is_enabled>Y</is_enabled>
         <nr_valuename/>
         <descriptions_valuename/>
